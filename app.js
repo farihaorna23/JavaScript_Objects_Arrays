@@ -55,4 +55,26 @@ const reverseString = sentence => {
   return result.join(" ");
 };
 
-console.log(reverseString("The quick brown fox jumps over the lazy dog"));
+// console.log(reverseString("The quick brown fox jumps over the lazy dog"));
+
+//Exercise 4
+//Parse a CSV
+
+const parseCSV = str => {
+  let arrRow = str.split("\n");
+  console.log(arrRow);
+  let result = [];
+  for (let i = 1; i < arrRow.length; i++) {
+    let row = arrRow[i].split(",");
+    // console.log(row);
+    let obj = {};
+    obj.name = row[0];
+    obj.age = row[1];
+    // console.log(obj);
+    result.push(obj);
+  }
+
+  console.log(result);
+};
+
+parseCSV("name,age\nFrodo,50\nSam,38\nMerry,36\nPippin,26");
