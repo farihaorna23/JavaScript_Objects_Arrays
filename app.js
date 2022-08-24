@@ -38,3 +38,21 @@ book.info = function() {
 };
 
 console.log(book.info());
+
+//Exercise 3: Reverse a String
+const reverseString = sentence => {
+  const arr = sentence.split(" ");
+  console.log(arr.length);
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(
+      arr[i]
+        .split("")
+        .reverse()
+        .join("")
+    );
+  }
+  return result.join(" ");
+};
+
+console.log(reverseString("The quick brown fox jumps over the lazy dog"));
